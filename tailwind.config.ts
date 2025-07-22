@@ -52,6 +52,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				hero: {
+					DEFAULT: 'hsl(var(--hero))',
+					foreground: 'hsl(var(--hero-foreground))'
+				},
+				'safari-gold': {
+					DEFAULT: 'hsl(var(--safari-gold))',
+					foreground: 'hsl(var(--safari-gold-foreground))'
+				},
+				'earth-brown': {
+					DEFAULT: 'hsl(var(--earth-brown))',
+					foreground: 'hsl(var(--earth-brown-foreground))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
