@@ -45,14 +45,18 @@
 
     --radius: 0.75rem;
 
-    /* Gradients */
+    /* Tourism-focused gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--hero)), hsl(var(--primary)));
     --gradient-gold: linear-gradient(135deg, hsl(var(--safari-gold)), hsl(var(--secondary)));
     --gradient-earth: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    --gradient-sunset: linear-gradient(135deg, hsl(25 85% 60%), hsl(45 95% 65%));
+    --gradient-adventure: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--safari-gold)));
 
-    /* Shadows */
+    /* Tourism shadows */
     --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.15);
     --shadow-gold: 0 8px 32px -8px hsl(var(--safari-gold) / 0.3);
+    --shadow-adventure: 0 20px 60px -10px hsl(var(--accent) / 0.4);
+    --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.25);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;

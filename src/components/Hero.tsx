@@ -36,18 +36,30 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button
               size="lg"
-              className="bg-safari-gold hover:bg-safari-gold/90 text-safari-gold-foreground font-semibold text-lg px-8 py-4 group"
+              className="bg-gradient-to-r from-safari-gold to-secondary hover:from-safari-gold/90 hover:to-secondary/90 text-safari-gold-foreground font-semibold text-lg px-8 py-4 group shadow-[var(--shadow-gold)] hover:shadow-[var(--shadow-adventure)] transition-all duration-300"
             >
-              Explore Experiences
+              🌟 Start Your Adventure
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-hero-foreground/30 text-hero-foreground hover:bg-hero-foreground/10 font-semibold text-lg px-8 py-4"
+              className="border-hero-foreground/30 text-hero-foreground hover:bg-hero-foreground/10 font-semibold text-lg px-8 py-4 hover:border-safari-gold/50 hover:text-safari-gold transition-all duration-300"
             >
-              Learn Our Culture
+              🏛️ Discover Culture
             </Button>
+          </div>
+
+          {/* Social Proof Banner */}
+          <div className="mb-12 animate-fade-in">
+            <div className="inline-flex items-center gap-4 bg-hero-foreground/10 backdrop-blur-sm rounded-full px-6 py-3 text-hero-foreground/90">
+              <div className="flex -space-x-2">
+                <div className="w-8 h-8 bg-safari-gold/30 rounded-full border-2 border-hero-foreground/20"></div>
+                <div className="w-8 h-8 bg-secondary/30 rounded-full border-2 border-hero-foreground/20"></div>
+                <div className="w-8 h-8 bg-accent/30 rounded-full border-2 border-hero-foreground/20"></div>
+              </div>
+              <span className="text-sm font-medium">Join 500+ visitors who discovered Chirumhanzu's treasures</span>
+            </div>
           </div>
 
           {/* Quick Stats */}
