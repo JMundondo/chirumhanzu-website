@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import About from "./pages/about";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PlacesOfInterest from "./pages/PlacesOfInterest";
@@ -13,6 +12,7 @@ import VirtualToursMuseum from "./pages/VirtualToursMuseum";
 import EventsPage from "./pages/EventsPage";
 import ContactUs from "./pages/ContactUs";
 import BlogContributors from "./pages/BlogContributors";
+import About from "./pages/About";
 import Shop from "./pages/Shop";
 const queryClient = new QueryClient();
 
