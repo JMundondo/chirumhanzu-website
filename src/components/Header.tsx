@@ -6,12 +6,14 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigationItems = [
-    { name: "Home", href: "#" },
-    { name: "About", href: "#about" },
-    { name: "Experiences", href: "#experiences" },
-    { name: "Culture", href: "#culture" },
-    { name: "Places", href: "#places" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Places of Interest", href: "/places-of-interest" },
+    { name: "Virtual Tours & Museum", href: "/virtual-tours-museum" },
+    { name: "Shop", href: "/shop" },
+    { name: "Blog & Contributors", href: "/blog-contributors" },
+    { name: "Events", href: "/events" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -54,7 +56,11 @@ const Header = () => {
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </Button>
           </div>
         </div>

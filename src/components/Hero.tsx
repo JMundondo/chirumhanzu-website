@@ -24,12 +24,15 @@ const Hero = () => {
 
           {/* Tagline */}
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-hero-foreground mb-6 leading-tight">
-            Discover Chirumhanzu's Hidden Treasures
+            Preserving our culture. Telling our stories.
           </h1>
 
           <p className="text-lg md:text-xl text-hero-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Experience authentic Zimbabwean culture, breathtaking landscapes, and rich history 
-            in the heart of Chirumhanzu District. Your gateway to unforgettable adventures.
+            Discover the heart of Chirumhanzu — a place where history, heritage,
+            and community come alive. From sacred shrines and historic landmarks
+            to vibrant traditions and natural beauty, this is your starting
+            point for exploring, learning, and connecting with one of Zimbabwe’s
+            most culturally rich regions
           </p>
 
           {/* CTA Buttons */}
@@ -44,7 +47,7 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-hero-foreground/30 text-hero-foreground hover:bg-hero-foreground/10 font-semibold text-lg px-8 py-4 hover:border-safari-gold/50 hover:text-safari-gold transition-all duration-300"
+              className="border-hero-foreground/30 text-black hover:bg-hero-foreground/10 font-semibold text-lg px-8 py-4 hover:border-safari-gold/50 hover:text-safari-gold transition-all duration-300"
             >
               🏛️ Discover Culture
             </Button>
@@ -58,7 +61,9 @@ const Hero = () => {
                 <div className="w-8 h-8 bg-secondary/30 rounded-full border-2 border-hero-foreground/20"></div>
                 <div className="w-8 h-8 bg-accent/30 rounded-full border-2 border-hero-foreground/20"></div>
               </div>
-              <span className="text-sm font-medium">Join 500+ visitors who discovered Chirumhanzu's treasures</span>
+              <span className="text-sm font-medium">
+                Join 500+ visitors who discovered Chirumhanzu's treasures
+              </span>
             </div>
           </div>
 
@@ -68,24 +73,36 @@ const Hero = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-safari-gold/20 rounded-full mb-4 group-hover:bg-safari-gold/30 transition-colors">
                 <MapPin className="h-8 w-8 text-safari-gold" />
               </div>
-              <h3 className="text-xl font-semibold text-hero-foreground mb-2">Sacred Sites</h3>
-              <p className="text-hero-foreground/80">Historic missions, hills, and wetlands to explore</p>
+              <h3 className="text-xl font-semibold text-hero-foreground mb-2">
+                Sacred Sites
+              </h3>
+              <p className="text-hero-foreground/80">
+                Historic missions, hills, and wetlands to explore
+              </p>
             </div>
 
             <div className="text-center group">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-safari-gold/20 rounded-full mb-4 group-hover:bg-safari-gold/30 transition-colors">
                 <Calendar className="h-8 w-8 text-safari-gold" />
               </div>
-              <h3 className="text-xl font-semibold text-hero-foreground mb-2">Rich Experiences</h3>
-              <p className="text-hero-foreground/80">Cultural tours, fishing, and storytelling nights</p>
+              <h3 className="text-xl font-semibold text-hero-foreground mb-2">
+                Rich Experiences
+              </h3>
+              <p className="text-hero-foreground/80">
+                Cultural tours, fishing, and storytelling nights
+              </p>
             </div>
 
             <div className="text-center group">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-safari-gold/20 rounded-full mb-4 group-hover:bg-safari-gold/30 transition-colors">
                 <Users className="h-8 w-8 text-safari-gold" />
               </div>
-              <h3 className="text-xl font-semibold text-hero-foreground mb-2">Local Community</h3>
-              <p className="text-hero-foreground/80">Authentic homestays and community experiences</p>
+              <h3 className="text-xl font-semibold text-hero-foreground mb-2">
+                Local Community
+              </h3>
+              <p className="text-hero-foreground/80">
+                Authentic homestays and community experiences
+              </p>
             </div>
           </div>
         </div>
