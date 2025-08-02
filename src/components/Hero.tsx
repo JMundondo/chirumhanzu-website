@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Calendar, Users } from "lucide-react";
+import { Link } from "react-router-dom";
+import BookingModal from "./BookingModal";
 
 const Hero = () => {
   return (
@@ -28,29 +30,25 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-hero-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Discover the heart of Chirumhanzu — a place where history, heritage,
+            Explore the heart of Chirumhanzu — a place where history, heritage,
             and community come alive. From sacred shrines and historic landmarks
             to vibrant traditions and natural beauty, this is your starting
-            point for exploring, learning, and connecting with one of Zimbabwe’s
+            point for exploring, learning, and connecting with one of Zimbabwe's
             most culturally rich regions
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-safari-gold to-secondary hover:from-safari-gold/90 hover:to-secondary/90 text-safari-gold-foreground font-semibold text-lg px-8 py-4 group shadow-[var(--shadow-gold)] hover:shadow-[var(--shadow-adventure)] transition-all duration-300"
-            >
-              🌟 Start Your Adventure
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-hero-foreground/30 text-black hover:bg-hero-foreground/10 font-semibold text-lg px-8 py-4 hover:border-safari-gold/50 hover:text-safari-gold transition-all duration-300"
-            >
-              🏛️ Discover Culture
-            </Button>
+            <BookingModal variant="hero" />
+            <Link to="/about">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-hero-foreground/30 text-black hover:bg-hero-foreground/10 font-semibold text-lg px-8 py-4 hover:border-safari-gold/50 hover:text-safari-gold transition-all duration-300"
+              >
+                🏛️ Discover Culture
+              </Button>
+            </Link>
           </div>
 
           {/* Social Proof Banner */}

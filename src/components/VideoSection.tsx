@@ -11,6 +11,7 @@ import {
   MapPin,
   Users,
 } from "lucide-react";
+import BookingModal from "./BookingModal";
 
 const DriefonteinSection = () => {
   const videoUrl = "https://www.youtube.com/watch?v=RvLMcb-MJOQ";
@@ -195,10 +196,14 @@ const DriefonteinSection = () => {
                   </ul>
                 </div>
                 <div className="flex items-center justify-start md:justify-center mt-4 md:mt-0">
-                  <Button className="gap-2">
-                    <MapPin className="h-4 w-4" />
-                    Plan Your Visit
-                  </Button>
+                  <BookingModal
+                    experience={{
+                      title: "Driefontein Wetlands Tour",
+                      price: "From $40",
+                      duration: "Half Day",
+                      type: "Nature & Wildlife",
+                    }}
+                  />
                 </div>
               </div>
             </CardContent>

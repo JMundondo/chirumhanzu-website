@@ -14,6 +14,7 @@ import ContactUs from "./pages/ContactUs";
 import BlogContributors from "./pages/BlogContributors";
 import About from "./pages/About";
 import Shop from "./pages/Shop";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -21,12 +22,12 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <Header />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="/about" element={<About />} /> {/* ⬅️ new route */}
+          <Route path="/about" element={<About />} />
           <Route path="/places-of-interest" element={<PlacesOfInterest />} />
           <Route
             path="/virtual-tours-museum"
@@ -38,8 +39,8 @@ const App = () => (
           <Route path="/contact" element={<ContactUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </TooltipProvider>
   </QueryClientProvider>
 );

@@ -17,6 +17,7 @@ import {
   MapPin,
   ExternalLink,
 } from "lucide-react";
+import BookingModal from "@/components/BookingModal";
 
 const PlacesOfInterest = () => {
   const places = [
@@ -311,10 +312,14 @@ const PlacesOfInterest = () => {
               that make each place special.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="gap-2">
-                <MapPin className="h-4 w-4" />
-                Plan Your Visit
-              </Button>
+              <BookingModal
+                experience={{
+                  title: "Chirumhanzu Places of Interest Tour",
+                  price: "From $60",
+                  duration: "Full Day",
+                  type: "Cultural Heritage",
+                }}
+              />
               <Button variant="outline" className="gap-2 bg-transparent">
                 <ExternalLink className="h-4 w-4" />
                 Download Guide

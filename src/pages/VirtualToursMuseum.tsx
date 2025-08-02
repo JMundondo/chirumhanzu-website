@@ -13,9 +13,53 @@ import {
   Bell,
   Smartphone,
   Globe,
+  CheckCircle,
+  AlertCircle,
 } from "lucide-react";
+import { useState } from "react";
 
 const VirtualToursMuseum = () => {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) {
+      setError("Please enter your email address");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setError("");
+
+    try {
+      const response = await fetch("https://formspree.io/f/xyzpdzpr", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          subject: "Virtual Tours Notification Signup",
+          message: `New signup for Virtual Tours notifications: ${email}`,
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setEmail("");
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setError("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const upcomingFeatures = [
     {
       icon: <Camera className="h-6 w-6" />,
@@ -97,7 +141,7 @@ const VirtualToursMuseum = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Badge variant="secondary" className="px-4 py-2">
-                    Expected Launch: Q2 2024
+                    Expected Launch: December 2025
                   </Badge>
                   <Badge variant="outline" className="px-4 py-2">
                     In Development
@@ -204,21 +248,67 @@ const VirtualToursMuseum = () => {
               Get notified when our Virtual Tours & Museum goes live. Be among
               the first to experience Chirumhanzu's digital heritage.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <Input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1"
-              />
-              <Button className="gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600">
-                <Bell className="h-4 w-4" />
-                Notify Me
-              </Button>
-            </div>
-            <p className="text-xs text-muted-foreground mt-3">
-              We'll only send you updates about the virtual tours launch. No
-              spam, ever.
-            </p>
+
+            {isSubmitted ? (
+              <div className="max-w-md mx-auto">
+                <div className="flex items-center justify-center gap-3 mb-4 p-4 bg-green-50 dark:bg-green-950/30 rounded-lg border border-green-200 dark:border-green-800">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <p className="text-green-700 dark:text-green-300 font-medium">
+                    Successfully subscribed! We'll notify you when virtual tours
+                    launch.
+                  </p>
+                </div>
+                <Button
+                  variant="outline"
+                  onClick={() => setIsSubmitted(false)}
+                  className="text-sm"
+                >
+                  Subscribe Another Email
+                </Button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Input
+                    type="email"
+                    placeholder="Enter your email address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="flex-1"
+                    disabled={isSubmitting}
+                  />
+                  <Button
+                    type="submit"
+                    className="gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
+                        Subscribing...
+                      </>
+                    ) : (
+                      <>
+                        <Bell className="h-4 w-4" />
+                        Notify Me
+                      </>
+                    )}
+                  </Button>
+                </div>
+                {error && (
+                  <div className="flex items-center gap-2 mt-3 p-3 bg-red-50 dark:bg-red-950/30 rounded-lg border border-red-200 dark:border-red-800">
+                    <AlertCircle className="h-4 w-4 text-red-600 flex-shrink-0" />
+                    <p className="text-red-700 dark:text-red-300 text-sm">
+                      {error}
+                    </p>
+                  </div>
+                )}
+                <p className="text-xs text-muted-foreground mt-3">
+                  We'll only send you updates about the virtual tours launch. No
+                  spam, ever.
+                </p>
+              </form>
+            )}
           </div>
         </div>
       </div>
