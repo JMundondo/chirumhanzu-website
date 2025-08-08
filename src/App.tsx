@@ -14,6 +14,7 @@ import ContactUs from "./pages/ContactUs";
 import BlogContributors from "./pages/BlogContributors";
 import About from "./pages/About";
 import Shop from "./pages/Shop";
+import Experiences from "./pages/Experiences";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="/about" element={<About />} />
           <Route path="/places-of-interest" element={<PlacesOfInterest />} />
+          <Route path="/experiences" element={<Experiences />} />
           <Route
             path="/virtual-tours-museum"
             element={<VirtualToursMuseum />}

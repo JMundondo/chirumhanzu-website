@@ -85,16 +85,10 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Explore</h3>
             <div className="space-y-3">
               <Link
-                to="/#experiences"
+                to="/"
                 className="block text-hero-foreground/80 hover:text-safari-gold transition-colors"
               >
-                Experiences
-              </Link>
-              <Link
-                to="/#culture"
-                className="block text-hero-foreground/80 hover:text-safari-gold transition-colors"
-              >
-                Culture & History
+                Home
               </Link>
               <Link
                 to="/places-of-interest"
@@ -103,10 +97,22 @@ const Footer = () => {
                 Places of Interest
               </Link>
               <Link
+                to="/experiences"
+                className="block text-hero-foreground/80 hover:text-safari-gold transition-colors"
+              >
+                Experiences
+              </Link>
+              <Link
                 to="/blog-contributors"
                 className="block text-hero-foreground/80 hover:text-safari-gold transition-colors"
               >
-                Blog & Stories
+                Blog, Stories & News
+              </Link>
+              <Link
+                to="/virtual-tours-museum"
+                className="block text-hero-foreground/80 hover:text-safari-gold transition-colors"
+              >
+                Virtual Tours & Museum
               </Link>
               <Link
                 to="/shop"
@@ -123,7 +129,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center text-hero-foreground/80">
                 <Mail className="h-4 w-4 mr-2" />
-                <span className="text-sm">info@visitchirumhanzu.com</span>
+                <span className="text-sm">visitchirumhanzu@gmail.com</span>
               </div>
               <div className="flex items-center text-hero-foreground/80">
                 <Phone className="h-4 w-4 mr-2" />

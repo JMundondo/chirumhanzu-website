@@ -35,7 +35,7 @@ const ContactUs = () => {
       icon: <Mail className="h-6 w-6" />,
       title: "Email Us",
       description: "Send us a message anytime",
-      contact: "info@visitchirumhanzu.co.zw",
+      contact: "visitchirumhanzu@gmail.com",
       action: "Send Email",
       color: "bg-blue-500",
     },
@@ -43,7 +43,7 @@ const ContactUs = () => {
       icon: <Phone className="h-6 w-6" />,
       title: "Call Us",
       description: "Speak with our team directly",
-      contact: "+263 XX XXX XXXX",
+      contact: "+263 718 594 447",
       action: "Call Now",
       color: "bg-green-500",
     },
@@ -59,7 +59,7 @@ const ContactUs = () => {
       icon: <MessageSquare className="h-6 w-6" />,
       title: "WhatsApp",
       description: "Quick messages and updates",
-      contact: "+263 XX XXX XXXX",
+      contact: "+263 718 594 447",
       action: "Message Us",
       color: "bg-orange-500",
     },
@@ -169,7 +169,7 @@ const ContactUs = () => {
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Phone Number
                     </label>
-                    <Input type="tel" placeholder="+263 XX XXX XXXX" />
+                    <Input type="tel" placeholder="+263 718 594 447" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">

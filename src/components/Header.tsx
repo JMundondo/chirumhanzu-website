@@ -10,10 +10,10 @@ const Header = () => {
   const navigationItems = [
     { name: "Home", href: "/" },
     { name: "Places of Interest", href: "/places-of-interest" },
+    { name: "Experiences", href: "/experiences" },
+    { name: "Blog, Stories & News", href: "/blog-contributors" },
     { name: "Virtual Tours & Museum", href: "/virtual-tours-museum" },
     { name: "Shop", href: "/shop" },
-    { name: "Blog & Contributors", href: "/blog-contributors" },
-    { name: "Events", href: "/events" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];

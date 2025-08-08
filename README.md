@@ -151,7 +151,7 @@ This project is licensed under the MIT License.
 
 For support or questions about Chirumhanzu tourism:
 
-- Email: info@visitchirumhanzu.co.zw
+- Email: visitchirumhanzu@gmail.com
 - Phone: +263 718 594 447
 
 ## 🌍 About Chirumhanzu

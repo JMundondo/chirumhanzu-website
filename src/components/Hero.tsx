@@ -1,8 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin, Calendar, Users } from "lucide-react";
-import { Link } from "react-router-dom";
-import BookingModal from "./BookingModal";
-
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-hero to-primary overflow-hidden">
@@ -36,73 +31,6 @@ const Hero = () => {
             point for exploring, learning, and connecting with one of Zimbabwe's
             most culturally rich regions
           </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <BookingModal variant="hero" />
-            <Link to="/about">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-hero-foreground/30 text-black hover:bg-hero-foreground/10 font-semibold text-lg px-8 py-4 hover:border-safari-gold/50 hover:text-safari-gold transition-all duration-300"
-              >
-                🏛️ Discover Culture
-              </Button>
-            </Link>
-          </div>
-
-          {/* Social Proof Banner */}
-          <div className="mb-12 animate-fade-in">
-            <div className="inline-flex items-center gap-4 bg-hero-foreground/10 backdrop-blur-sm rounded-full px-6 py-3 text-hero-foreground/90">
-              <div className="flex -space-x-2">
-                <div className="w-8 h-8 bg-safari-gold/30 rounded-full border-2 border-hero-foreground/20"></div>
-                <div className="w-8 h-8 bg-secondary/30 rounded-full border-2 border-hero-foreground/20"></div>
-                <div className="w-8 h-8 bg-accent/30 rounded-full border-2 border-hero-foreground/20"></div>
-              </div>
-              <span className="text-sm font-medium">
-                Join 500+ visitors who discovered Chirumhanzu's treasures
-              </span>
-            </div>
-          </div>
-
-          {/* Quick Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-safari-gold/20 rounded-full mb-4 group-hover:bg-safari-gold/30 transition-colors">
-                <MapPin className="h-8 w-8 text-safari-gold" />
-              </div>
-              <h3 className="text-xl font-semibold text-hero-foreground mb-2">
-                Sacred Sites
-              </h3>
-              <p className="text-hero-foreground/80">
-                Historic missions, hills, and wetlands to explore
-              </p>
-            </div>
-
-            <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-safari-gold/20 rounded-full mb-4 group-hover:bg-safari-gold/30 transition-colors">
-                <Calendar className="h-8 w-8 text-safari-gold" />
-              </div>
-              <h3 className="text-xl font-semibold text-hero-foreground mb-2">
-                Rich Experiences
-              </h3>
-              <p className="text-hero-foreground/80">
-                Cultural tours, fishing, and storytelling nights
-              </p>
-            </div>
-
-            <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-safari-gold/20 rounded-full mb-4 group-hover:bg-safari-gold/30 transition-colors">
-                <Users className="h-8 w-8 text-safari-gold" />
-              </div>
-              <h3 className="text-xl font-semibold text-hero-foreground mb-2">
-                Local Community
-              </h3>
-              <p className="text-hero-foreground/80">
-                Authentic homestays and community experiences
-              </p>
-            </div>
-          </div>
         </div>
       </div>
 

@@ -129,30 +129,26 @@ const BookingModal = ({
     setError("");
 
     try {
-      const response = await fetch(
-        "https://formspree.io/f/YOUR_BOOKING_FORMSPREE_ID",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            ...formData,
-            preferredDate: date ? format(date, "PPP") : "",
-            selectedExperience:
-              experience?.title || formData.selectedExperience,
-            selectedPrice: experience?.price || formData.selectedPrice,
-            subject: `New Booking Request - ${
-              experience?.title || "Chirumhanzu Tour"
-            }`,
-            message: `New booking request from ${formData.name} for ${
-              experience?.title || formData.tourType
-            } (${experience?.price || "Price TBD"}) on ${
-              date ? format(date, "PPP") : ""
-            }`,
-          }),
-        }
-      );
+      const response = await fetch("https://formspree.io/f/xyzpdzpr", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          preferredDate: date ? format(date, "PPP") : "",
+          selectedExperience: experience?.title || formData.selectedExperience,
+          selectedPrice: experience?.price || formData.selectedPrice,
+          subject: `New Booking Request - ${
+            experience?.title || "Chirumhanzu Tour"
+          }`,
+          message: `New booking request from ${formData.name} for ${
+            experience?.title || formData.tourType
+          } (${experience?.price || "Price TBD"}) on ${
+            date ? format(date, "PPP") : ""
+          }`,
+        }),
+      });
 
       if (response.ok) {
         setIsSubmitted(true);
@@ -319,7 +315,7 @@ const BookingModal = ({
                   </label>
                   <Input
                     type="tel"
-                    placeholder="+263 XXX XXX XXX"
+                    placeholder="+263 718 594 447"
                     value={formData.phone}
                     onChange={(e) => handleInputChange("phone", e.target.value)}
                     required
