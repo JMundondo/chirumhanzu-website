@@ -47,7 +47,13 @@
     "react-router-dom": "^6.21.3",
     "sonner": "^1.4.0",
     "tailwind-merge": "^2.2.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "react-day-picker": "^8.10.0",
+    "input-otp": "^1.2.4",
+    "vaul": "^0.9.1",
+    "cmdk": "^0.2.0",
+    "recharts": "^2.12.2",
+    "react-resizable-panels": "^2.0.16"
   },
   "devDependencies": {
     "@types/node": "^20.11.5",
